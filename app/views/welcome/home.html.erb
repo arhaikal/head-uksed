@@ -10,20 +10,7 @@
   </head>
   <body>
     <div id="page-container">
-      <nav id="my-navbar" class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle"> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Head Uksed</a>
-          </div>
-          <div id="navbar-collapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="../../index.html">Home</a></li>
-                    <li><a href="layouts/application.html.erb">Portfolio</a></li>
-                    <li><a href="html/pages/contact.html">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <%= render 'layouts/header' %>
       <header>         
         <div class="cover jumbotron">
           <h1>Head Uksed</h1>
@@ -53,7 +40,6 @@
           </div>
         </div>
       </div>
-      
       <div id="content">
         <div class="container"> 
           <div class="row"> 
@@ -86,11 +72,7 @@
         </div>
       </div>
     </div>
-    <footer class="sitefooter">
-      <h3>Copyright &copy; Euphoria Family</h3>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"> </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="js/jquery.js"></script>
+    <%= render 'layouts/footer' %>
+
   </body>
 </html>

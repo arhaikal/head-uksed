@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'paperclip', '~> 5.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
 
 group :development, :test do
   gem 'byebug'
