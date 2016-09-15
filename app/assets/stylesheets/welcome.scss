@@ -66,7 +66,7 @@ ul li a {
 
 .cover {
   margin-top: 51px;
-  background-image: linear-gradient(#fec15f, transparent 50%), linear-gradient(to top, #fff, transparent 30%), url("door1.jpg");
+  background-image: linear-gradient(#fec15f, transparent 50%), linear-gradient(to top, #fff, transparent 30%), image-url("door1.jpg");
   background-repeat: no-repeat;
   background-position: 50% 60%;
   background-size: cover;
@@ -218,7 +218,7 @@ ul li a {
 .gallery .gallery-item {
   height: 350px;
   width: 150px;
-  background: url("Doors_1.jpeg");
+  background: image-url("Doors_1.jpeg");
   background-size: 2600px;
   background-position: 480px 760px;
   display: block;
@@ -248,7 +248,7 @@ ul li a {
 
 .profile {
   min-height: 700px;
-  background-image: linear-gradient(#fff, transparent 50%), url("wood.jpg");
+  background-image: linear-gradient(#fff, transparent 50%), image-url("wood.jpg");
   background-position: 40% 80%;
   margin-bottom: 0;
   margin-top: 200px;
