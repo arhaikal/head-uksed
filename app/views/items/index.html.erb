@@ -4,9 +4,14 @@
       <div class="col-sm-12 col-md-4">
         <div class="thumbnail">
           <%= link_to (image_tag item.image.url(:medium), class: 'image'), item %>
-          <%= item.title %>
+          <h2 class="items-title"> <%= item.title %> </h2>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+<div class="container">
+<%= will_paginate @items, renderer: BootstrapPagination::Rails %>
+</div>
+
+
