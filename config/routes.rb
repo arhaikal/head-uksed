@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   get 'welcome/home'
   resources :contacts, only: [:new, :create]
+  get 'contact/new'
   resources :items
-  root 'items#index'
+  root 'welcome#index'
 
   get "/welcome/:page" => "welcome#show"
   

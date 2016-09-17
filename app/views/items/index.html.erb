@@ -1,4 +1,4 @@
-<div class="container index ">
+<div class="container index">
  <div class="row " >
     <% @items.each do |item| %>
       <div class="col-sm-12 col-md-4">
@@ -13,5 +13,7 @@
 <div class="container">
 <%= will_paginate @items, renderer: BootstrapPagination::Rails %>
 </div>
+    
+
 
 
