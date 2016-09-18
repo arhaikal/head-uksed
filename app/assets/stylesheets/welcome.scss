@@ -9,9 +9,10 @@ html body {
 }
 
 #page-container {
-  width: 100%;
-  margin: 0 auto;
-  height: clac(100% -70px);
+  min-height: 100%;
+  height: auto;
+  height: 100%;
+  margin: 0 auto -70px;
 }
 
 ul {
@@ -47,6 +48,11 @@ ul li a {
   background: #2d1000;
 }
 
+
+#push {
+  height: 70px;
+}
+
 .sitefooter {
   width: 100%;
   bottom: 0;
@@ -58,6 +64,7 @@ ul li a {
   justify-content: center;
   align-items: center;
   text-align: center;
+
 }
 
 .sitefooter h3 {
