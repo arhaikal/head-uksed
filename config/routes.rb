@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'welcome/home'
+  get 'welcome/index'
   resources :contacts, only: [:new, :create]
   get 'contact/new'
+
   resources :items
   root 'welcome#index'
 
