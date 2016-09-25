@@ -1,5 +1,5 @@
 class CreateItems < ActiveRecord::Migration
-  def change
+  def up
     create_table :items do |t|
       t.string :title
       t.string :price
@@ -8,5 +8,8 @@ class CreateItems < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+   def down 
+     drop_table :items
+   end
   end
 end
