@@ -1,28 +1,74 @@
+
 <div class="container items-show">
+    <div class="row">
+     <div class="col-md-12">
+	     <div class="btn-group" role="group" aria-label="...">
+	       <button type="button" class="btn btn-default">
+	       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	       <%= link_to 'Back to gallery', items_path %>       	
+	       </button>
+	     </div>
+     </div>
+    </div>
+    <br>
+	<br>
+	<div class="row">
+		<div class="col-md-6">
+			<%= image_tag @item.image.url(:large) %>
+		</div>
 
-<%= image_tag @item.image.url(:medium) %>
+    <div class= "row">
+	   <div class="col-md-6">
+		   <div class="row">
+			    <div class="col-md-12">
+			       <h1><%= @item.title %></h1>
+			    </div>
+	        </div>
+	        <div class="row">
+			 <div class="col-md-12 bottom-rule">
+			  <h4 class="product-price"> € <%= @item.price %></h4>
+			 </div>
+			</div>
+			<br>
 
-<p>
-  <strong>Title:</strong>
-  <%= @item.title %>
-</p>
+			<div class="row">
+			 <div class="col-md-12 bottom-rule">
+			  <h6 class="product-price"> <strong>Availability</strong>: Pre-Order </h6>
+			 </div>
+			</div>
+	        <div class="row">
+			 <div class="col-md-12 top-10">
+			  <p>To order by telephone, <a href="tel:180">please call +372 54545454</a></p>
+			 </div>
+			</div>
+			<br>
+		    <ul class="nav nav-tabs" role="tablist">
+			 <li role="presentation" class="active">
+			  <a href="#description"
+			   aria-controls="description"
+			   role="tab"
+			   data-toggle="tab"
+			  >Description</a>
+			 </li>
+			 <li role="presentation">
+			  <a href="#features"
+			   aria-controls="features"
+			   role="tab"
+			   data-toggle="tab"
+			  >Material</a>
+			 </li>
+			</ul>
 
-<p>
-  <strong>Price:</strong>
-  <%= @item.price %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @item.description %>
-</p>
-
-<p>
-  <strong>Material:</strong>
-  <%= @item.material %>
-</p>
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
-
+			<div class="tab-content">
+			 <div role="tabpanel" class="tab-pane active" id="description">
+			  <p> <%= @item.description %> </p>
+			 </div>
+			 <div role="tabpanel" class="tab-pane top-10" id="features">
+			  <%= @item.material %>
+			 </div>
+			</div>
+			
+	   </div>
+	   </div>
+	</div>
 </div>

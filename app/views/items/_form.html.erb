@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container items-show">
 <%= form_for @item, html: { multipart: true } do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
@@ -22,11 +22,11 @@
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </div>
   <div class="field">
     <%= f.label :material %><br>
-    <%= f.text_field :material %>
+    <%= f.text_area :material %>
   </div>
   <div class="field">
     <%= f.label :image %><br>

@@ -8,11 +8,14 @@ html body {
   margin: 0 auto;
 }
 
+#page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+}
 #page-container {
-  min-height: 100%;
-  height: auto;
-  height: 100%;
-  margin: 0 auto -70px;
+  flex: 1;
 }
 
 ul {
@@ -383,4 +386,15 @@ text-align: center;
 .items-show {
   margin-top: 100px;
 
+}
+
+.items {
+  display: flex; 
+  justify-content: flex-end;
+
+
+}
+
+.active1 {
+  background: #593723;
 }

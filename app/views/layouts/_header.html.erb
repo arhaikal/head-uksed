@@ -5,9 +5,11 @@
           </div>
           <div id="navbar-collapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><%= link_to "Home",   root_path %></li>
-                    <li><%= link_to "Portfolio",   items_path %></li>
-                    <li><%= link_to "Contact",  new_contact_path %></li>
+          
+              <li><%= link_to "Home", root_path, :class => current_class?(root_path)  %></li>
+              <li><%= link_to "Portfolio",   items_path, :class => current_class?(items_path)  %></li>
+              <li><%= link_to "Contact",  new_contact_path, :class => current_class?(new_contact_path) %></li>
+
             </ul>
           </div>
         </div>
