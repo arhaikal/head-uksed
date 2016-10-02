@@ -8,7 +8,4 @@ class Item < ActiveRecord::Base
 
   translates :description, :material
    
-
-
-
 end
