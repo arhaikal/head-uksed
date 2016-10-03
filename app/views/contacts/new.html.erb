@@ -11,12 +11,12 @@
            <%= f.text_area :message, as: :text %>
            <br>
            <br>
-           <%= f.label :file %><br>
+           <%= f.label :file  %><br>
            <%= f.file_field :file %>
            <br>
            <br>
            <div class="hidden">
-             <%= f.label :nickname %> 
+             <%= f.label  :nickname %> 
              <%= f.text_field :nickname, hint: "leave this field blank" %>
            </div>
            <%= f.submit 'Send Message', class: "button" %> 
