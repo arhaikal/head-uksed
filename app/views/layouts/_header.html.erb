@@ -1,11 +1,12 @@
  <nav id="my-navbar" class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
-            <button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle"> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Head Uksed</a>
+            <button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle"> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
           </div>
       
           <div id="navbar-collapse" class="collapse navbar-collapse">
             
+            <%= embedded_svg "valentine.svg", class: 'logo' %>
             <ul class="nav navbar-nav navbar-right">
           
               <li><%= link_to "Home", root_path, :class => current_class?(root_path)  %></li>

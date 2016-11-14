@@ -1,3 +1,15 @@
+
+
+* {
+
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+a {
+    font-family: 'Fjalla One', sans-serif;
+
+  }
+
 html body {
   width: 100%;
   height: 100%;
@@ -6,6 +18,16 @@ html body {
   overflow-x: hidden;
   position: relative;
   margin: 0 auto;
+}
+
+a {
+
+  color: #fec15f ;
+}
+
+a:hover {
+
+  color: #593723;
 }
 
 #page {
@@ -34,21 +56,59 @@ ul li a {
   padding: 0 0 70px;
 }
 
+#navbar-collapse {
+  padding-top: 5px;
+  .navbar-nav .active a {
+    background: none;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+    color: whiteSmoke;
+  }
+}
+
+.nav {
+  padding-top: 5px;
+
+}
+
 #my-navbar {
   background-color: rgba(89, 55, 35, 0.9);
   border-color: rgba(89, 55, 35, 0.9);
+  a {
+    font-family: 'Fjalla One', sans-serif;
+    color: #e8e8e8;
+    margin-left: 25px;
+    text-decoration: none;
+    &:hover {
+      color: #e8e8e8;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #e8e8e8;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+      }
+    &:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+    }
 }
 
-#my-navbar a {
-  color: white;
-}
-
-#my-navbar a:hover {
-  background-color: #593723;
-}
-
-#my-navbar #navbar-collapse .navbar-nav .active a {
-  background: #2d1000;
+@media screen and (max-width: 767.5px) {
+  .logo {
+    display: none;
+  }
 }
 
 
@@ -60,9 +120,9 @@ ul li a {
   width: 100%;
   bottom: 0;
   height: 70px;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  background-color: #2d1000;
+  background-color: whiteSmoke;
+  color: rgb(89, 55, 35);
+  border-top: 2px rgba(89, 55, 35, 0.9) solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,26 +134,39 @@ ul li a {
   margin: auto;
 }
 
+.jumborton {
+  color: #e8e8e8
+}
+
 .cover {
-  margin-top: 51px;
-  background-image: linear-gradient(#fec15f, transparent 50%), linear-gradient(to top, #fff, transparent 30%), image-url("door1.jpg");
+  margin-top: 0px;
+  background-image: linear-gradient(#fec15f, transparent 50%), linear-gradient(to top, #f5f5f5, transparent 30%), image-url("door1.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 60%;
+  background-position: 50% 20%;
   background-size: cover;
   min-height: 700px;
   margin-bottom: 100px;
+  color: #e8e8e8;
+
 }
 
-.cover h1 {
+.cover .h1 {
+  font-family: 'Fjalla One', sans-serif;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 80px;
+  color: #e8e8e8;
+  font-size: 6em;
+
+
 }
 
 .cover h2 {
   text-align: center;
   margin-bottom: 0;
   padding-top: 0;
+  color: #e8e8e8;
 }
+
 
 #about {
   margin: 150px 0px 150px 0px;
@@ -228,37 +301,38 @@ ul li a {
 .gallery .gallery-item {
   height: 350px;
   width: 150px;
-  background: image-url("Doors_1.jpeg");
-  background-size: 2600px;
-  background-position: 480px 760px;
+  background:image-url("Door_glass_1.jpg");
   display: block;
   margin: auto;
   margin-bottom: 70px;
 }
 
 .gallery .item-2 {
-  background-position: 630px 760px;
+  background:image-url("Doors_glass_2.jpg");
 }
 
 .gallery .item-3 {
-  background-position: 480px 1135px;
+  background:image-url("Doors_design_1.jpg");
 }
 
 .gallery .item-4 {
-  background-position: 480px 1500px;
+    background:image-url("Doors_wood_wave_1.jpg");
+
 }
 
 .gallery .item-5 {
-  background-position: 480px 380px;
+    background:image-url("Doors_modern_1.jpg");
+
 }
 
 .gallery .item-6 {
-  background-position: 630px 1500px;
+    background:image-url("Doors_modern_2.jpg");
+
 }
 
 .profile {
   min-height: 700px;
-  background-image: linear-gradient(#fff, transparent 50%), image-url("wood.jpg");
+  background-image: linear-gradient(#fff, transparent 50%), image-url("wood2.jpg");
   background-position: 40% 80%;
   margin-bottom: 0;
   margin-top: 200px;
@@ -326,14 +400,20 @@ ul li a {
   color: solid white;
 }
 
+.contactContainer{
+  padding-bottom: 5rem;
+}
+
+
 .skinny-wrapper {
-  width: 80%;
+  width: 100%;
   max-width: 760px;
   margin: 0 auto;
+
 }
 
 .wrapper-padding {
-  padding: 10rem 0;
+  padding-top: 10rem;
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
@@ -343,6 +423,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
   border: 2px solid #fec15f;
   padding: 1em;
   margin: .5em 0 2em 0;
+  outline: none;
 }
 
 textarea {
@@ -360,8 +441,8 @@ textarea {
 }
 
 .button:hover, button[type="submit"]:hover {
-  border: 2px solid #FB7900;
-  color: #FB7900;
+  border: 2px solid #593723;
+  color: #593723;
 }
 
 .hidden {
@@ -369,8 +450,10 @@ textarea {
 
 }
 
+
 .index {
-  margin-top: 100px;
+  margin-top: 150px;
+  margin-bottom: 40px
 
 }
 
@@ -383,8 +466,15 @@ text-align: center;
 
 }
 
+.paginate {
+margin-bottom: 50px;
+}
+
+
 .items-show {
-  margin-top: 100px;
+  margin-top: 120px;
+  margin-bottom: 70px;
+
 
 }
 
@@ -396,5 +486,74 @@ text-align: center;
 }
 
 .active1 {
-  background: #593723;
+    background: none;
+    font-weight: bold;
+    color: whiteSmoke;
 }
+
+.pagination li a {
+    
+  outline: none;
+  border: 2px solid #fec15f;
+  text-decoration: none;
+  color: #593723;; 
+  font-size: 1em;
+  
+}
+
+.pagination li a:hover {
+    
+   outline: none;
+  border: 2px solid #593723;
+  background-color: white;
+  color: #593723;
+  
+}
+.pagination .disabled span {
+    
+  outline: none;
+  background: transparent;
+  border: 2px solid #fec15f;
+  text-decoration: none;
+  color: #593723;
+  
+}
+
+.pagination .active span {
+    
+  outline: none;
+  background: #fec15f;;
+  border: 2px solid #fec15f;
+  text-decoration: none;
+  color: #593723;
+}
+
+.pagination .active span:hover {
+    
+  outline: none;
+  border: 2px solid #593723;
+  background-color: white;
+  color: #593723;
+}
+
+.nav li a:hover {
+   color: #593723;
+   
+}
+
+
+
+.nav-tabs {
+      border-color: #fec15f;
+
+
+}
+
+.nav .active  {
+  outline: none;
+  background: #fec15f;;
+  border: 1px solid #fec15f;
+  text-decoration: none;
+  color: #593723;
+  border-bottom: none; 
+  border-right: .5px solid #fec15f;}

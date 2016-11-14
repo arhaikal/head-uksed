@@ -3,10 +3,9 @@
     <div class="row">
      <div class="col-md-12">
 	     <div class="btn-group" role="group" aria-label="...">
-	       <button type="button" class="btn btn-default">
-	       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-	       <%= link_to 'Back to gallery', items_path %>       	
-	       </button>
+	        <%= button_to items_path, {remote: true, class: "button"} do %>
+              <i class="glyphicon glyphicon-chevron-left"></i>Back to gallery
+            <% end %>
 	     </div>
      </div>
     </div>

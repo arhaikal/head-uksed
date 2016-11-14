@@ -10,8 +10,8 @@
     <% end %>
   </div>
 </div>
-<div class="container">
-<%= will_paginate @items, renderer: BootstrapPagination::Rails %>
+<div class="container paginate">
+<%= will_paginate @items, renderer: BootstrapPagination::Rails, :previous_label => '<<', :next_label => '>>' %>
 </div>
     
 

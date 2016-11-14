@@ -1,28 +1,38 @@
-  <div class="skinny-wrapper wrapper-padding"> 
-          <h1>Contact us </h1><br>
-          <%= form_for @contact do |f| %> 
-           <%= f.label :name %> 
-           <%= f.text_field :name, required: true %>
-           <br>
-           <%= f.label :email %> 
-           <%= f.email_field :email, required: true %>
-           <br>
-           <%= f.label :message %> 
-           <%= f.text_area :message, as: :text %>
-           <br>
-           <br>
-           <%= f.label :file  %><br>
-           <%= f.file_field :file %>
-           <br>
-           <br>
-           <div class="hidden">
-             <%= f.label  :nickname %> 
-             <%= f.text_field :nickname, hint: "leave this field blank" %>
-           </div>
-           <%= f.submit 'Send Message', class: "button" %> 
-           
-           <br>
-
-          <% end %>
-          
+<div class="container contactContainer">
+ <div class="skinny-wrapper wrapper-padding"> 
+      <h1>Contact Form </h1><br>
+  <div class="row">
+   
+    <div class="col-md-6">
+      <i class="fa fa-envelope-o" aria-hidden="true"></i> HeadUksed@gmail.com
     </div>
+    <div class="col-md-6">
+     
+              <%= form_for @contact do |f| %> 
+               <%= f.label :name %> 
+               <%= f.text_field :name, required: true %>
+               <br>
+               <%= f.label :email %> 
+               <%= f.email_field :email, required: true %>
+               <br>
+               <%= f.label :message %> 
+               <%= f.text_area :message, as: :text %>
+               <br>
+               <br>
+               <%= f.label :file  %><br>
+               <%= f.file_field :file %>
+               <br>
+               <br>
+               <div class="hidden">
+                 <%= f.label  :nickname %> 
+                 <%= f.text_field :nickname, hint: "leave this field blank" %>
+               </div>
+               <%= f.submit 'Send Message', class: "button" %> 
+               
+               <br>
+
+              <% end %>
+        </div>      
+      </div>
+  </div>
+</div>
