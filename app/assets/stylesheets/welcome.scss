@@ -132,6 +132,7 @@ ul li a {
 
 .sitefooter h3 {
   margin: auto;
+  margin-bottom: 5px;
 }
 
 .jumborton {
@@ -393,6 +394,18 @@ ul li a {
   }
 }
 
+.image {
+
+  overflow: hidden;
+  transition-duration: .6s;
+}
+
+.image:hover {
+  transform: scale(1.05);
+  
+
+}
+
 .profile .profile-text p {
   padding-top: 150px;
   padding-left: 20px;
@@ -430,12 +443,49 @@ textarea {
   min-height: 20em;
 }
 
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+
+}
+
+.button_add {
+  outline: none;
+  background: transparent;
+  border: 1px solid #fec15f;
+  text-align: center;
+  font-size: .8em;
+  text-decoration: none;
+  padding: 1em 2em;
+}
+
+.button_add:hover {
+  border: 1px solid #593723;
+  color: #593723;
+}
+
 .button, button[type="submit"] {
   outline: none;
   background: transparent;
   border: 2px solid #fec15f;
   text-align: center;
-  font-size: 1em;
+  font-size: 1.2em;
   text-decoration: none;
   padding: 1em 2em;
 }
@@ -497,8 +547,8 @@ margin-bottom: 50px;
   border: 2px solid #fec15f;
   text-decoration: none;
   color: #593723;; 
-  font-size: 1em;
-  
+  font-weight: bold;
+  font-size: .7em;
 }
 
 .pagination li a:hover {
@@ -507,7 +557,8 @@ margin-bottom: 50px;
   border: 2px solid #593723;
   background-color: white;
   color: #593723;
-  
+  font-weight: bold;
+  font-size: .7em;
 }
 .pagination .disabled span {
     
@@ -516,6 +567,8 @@ margin-bottom: 50px;
   border: 2px solid #fec15f;
   text-decoration: none;
   color: #593723;
+  font-weight: bold;
+  font-size: .7em;
   
 }
 
@@ -526,6 +579,8 @@ margin-bottom: 50px;
   border: 2px solid #fec15f;
   text-decoration: none;
   color: #593723;
+  font-weight: bold;
+  font-size: .7em;
 }
 
 .pagination .active span:hover {
@@ -534,6 +589,8 @@ margin-bottom: 50px;
   border: 2px solid #593723;
   background-color: white;
   color: #593723;
+  font-weight: bold;
+  font-size: .7em;
 }
 
 .nav li a:hover {
@@ -557,3 +614,8 @@ margin-bottom: 50px;
   color: #593723;
   border-bottom: none; 
   border-right: .5px solid #fec15f;}
+
+
+ 
+
+

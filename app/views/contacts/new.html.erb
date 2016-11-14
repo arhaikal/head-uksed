@@ -3,10 +3,7 @@
       <h1>Contact Form </h1><br>
   <div class="row">
    
-    <div class="col-md-6">
-      <i class="fa fa-envelope-o" aria-hidden="true"></i> HeadUksed@gmail.com
-    </div>
-    <div class="col-md-6">
+    <div class="col-md-12">
      
               <%= form_for @contact do |f| %> 
                <%= f.label :name %> 
@@ -19,8 +16,11 @@
                <%= f.text_area :message, as: :text %>
                <br>
                <br>
-               <%= f.label :file  %><br>
-               <%= f.file_field :file %>
+               <%= f.label :file, "Upload your example here:"%><br>
+               <span class="btn btn-orange btn-file button_add">
+                  <span class="glyphicon glyphicon-open" aria-hidden="true"></span> Choose Image
+                  <%= f.file_field :file %>
+               </span>
                <br>
                <br>
                <div class="hidden">

@@ -3,9 +3,8 @@
     <div class="row">
      <div class="col-md-12">
 	     <div class="btn-group" role="group" aria-label="...">
-	        <%= button_to items_path, {remote: true, class: "button"} do %>
-              <i class="glyphicon glyphicon-chevron-left"></i>Back to gallery
-            <% end %>
+              <%= button_to "< Back to Gallery", items_path, class: "button", :method => "get" %>
+            
 	     </div>
      </div>
     </div>
