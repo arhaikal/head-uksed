@@ -1,6 +1,8 @@
 ru:
+  layouts:
+    header:
+     lang:  "НА РУССКОМ"
   welcome:
-   lang: Russian
    index:
     title: "HEAD UKSED"
     cover-date: "arina"
