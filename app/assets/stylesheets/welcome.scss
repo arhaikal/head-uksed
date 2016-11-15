@@ -62,7 +62,7 @@ ul li a {
     background: none;
     bottom: 0;
     left: 0;
-    font-weight: bold;
+    
     color: whiteSmoke;
   }
 }
@@ -71,6 +71,8 @@ ul li a {
   padding-top: 5px;
 
 }
+
+
 
 #my-navbar {
   background-color: rgba(89, 55, 35, 0.9);
@@ -541,6 +543,31 @@ margin-bottom: 50px;
     color: whiteSmoke;
 }
 
+#my-navbar a.active1  {
+    &:hover {
+      color: #e8e8e8;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+      }
+    &:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+    }
+
 .pagination li a {
     
   outline: none;
@@ -616,6 +643,70 @@ margin-bottom: 50px;
   border-right: .5px solid #fec15f;}
 
 
- 
 
+.navbar-inverse .navbar-nav .open a.dropdown-toggle {
+    background: none;
+    color: whiteSmoke;
+ }
 
+#my-navbar .open a.dropdown-toggle {
+    &:hover {
+      color: #e8e8e8;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+      }
+    &:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+    }
+
+.dropdown-menu li a {
+  background: none;
+  color: whiteSmoke;
+  border: none;
+  &:hover {
+  background: none;
+  color: whiteSmoke;
+    }
+ }
+
+@media screen and (max-width:  767.5px) {
+#my-navbar .dropdown-menu a {
+    &:hover {
+      color: #e8e8e8;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+      }
+    &:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+    }
+}

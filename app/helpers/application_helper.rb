@@ -4,6 +4,7 @@ module ApplicationHelper
     return 'active1' if request.path == test_path
     ''
    end 
+  
 
   def embedded_svg filename, options={}
    file = File.read(Rails.root.join('app', 'assets', 'images', filename))

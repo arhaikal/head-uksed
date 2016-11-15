@@ -9,14 +9,16 @@
             <%= embedded_svg "valentine.svg", class: 'logo' %>
             <ul class="nav navbar-nav navbar-right">
           
-              <li><%= link_to "Home", root_path, :class => current_class?(root_path)  %></li>
-              <li><%= link_to "Portfolio",   items_path, :class => current_class?(items_path)  %></li>
-              <li><%= link_to "Contact",  new_contact_path, :class => current_class?(new_contact_path) %></li>
+              <li><%= link_to "AVALEHT" , root_path, :class => current_class?(root_path) %></li>
+              <li><%= link_to "PORTFOLIO",   items_path, :class => current_class?(items_path)%></li>
+              <li><%= link_to "KONTAKT",  new_contact_path, :class => current_class?(new_contact_path)%></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t ".lang" %> <span class="caret"></span></a>
                 <ul class="dropdown-menu" id="my-navbar">
-                  <li><%= link_to "Eesti", locale: "en" %></li>
-                  <li><%= link_to "pусский", locale: "ru" %></li>
+
+                  <li><%= link_to image_tag("http://img.auto24.ee/images/language_flags/language_flag_4.gif")+" Eesti keeles", {locale: "en"}, :class => "#{ 'hidden' if I18n.locale.to_s == 'en' }" %></li>
+
+                  <li><%= link_to image_tag("http://img.auto24.ee/images/language_flags/language_flag_5.gif")+" На русском", {locale: "ru"}, :class => "#{ 'hidden' if I18n.locale.to_s == 'ru' }" %></li>
               </ul>
             </li>
           </ul>
