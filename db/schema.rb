@@ -13,11 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20160928232045) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "friendly_id_slugs", force: :cascade do |t|
-    t.string   "slug",           limit: 255, null: false
-    t.integer  "sluggable_id",   limit: 4,   null: false
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
     t.string   "sluggable_type", limit: 50
-    t.string   "scope",          limit: 255
+    t.string   "scope"
     t.datetime "created_at"
   end
 
@@ -27,29 +30,29 @@ ActiveRecord::Schema.define(version: 20160928232045) do
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
   create_table "item_translations", force: :cascade do |t|
-    t.integer  "item_id",     limit: 4,     null: false
-    t.string   "locale",      limit: 255,   null: false
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.string   "description", limit: 255
-    t.text     "material",    limit: 65535
+    t.integer  "item_id",     null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "description"
+    t.text     "material"
   end
 
   add_index "item_translations", ["item_id"], name: "index_item_translations_on_item_id", using: :btree
   add_index "item_translations", ["locale"], name: "index_item_translations_on_locale", using: :btree
 
   create_table "items", force: :cascade do |t|
-    t.string   "title",              limit: 255
-    t.string   "price",              limit: 255
-    t.string   "description",        limit: 255
-    t.string   "material",           limit: 255
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.string   "image_file_name",    limit: 255
-    t.string   "image_content_type", limit: 255
-    t.integer  "image_file_size",    limit: 4
+    t.string   "title"
+    t.string   "price"
+    t.text     "description"
+    t.text     "material"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "slug",               limit: 255
+    t.string   "slug"
   end
 
 end
