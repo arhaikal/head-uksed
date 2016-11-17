@@ -20,3 +20,13 @@ test:
   host: localhost
   username: postgres
   password: 1988iloveyou
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: valentine_production
+  pool: 5
+  post: 5432
+  host: localhost
+  username: postgres
+  password: 1988iloveyou
