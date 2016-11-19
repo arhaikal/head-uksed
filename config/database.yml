@@ -4,20 +4,20 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: valentine_development
+  database: dfihue9i959bua
   pool: 5
-  host: localhost
+  host: ec2-54-225-103-132.compute-1.amazonaws.com
   port: 5432
-  username: postgres
-  password: 1988iloveyou
+  username: evbouuvyrgnlqj
+  password: 6kSDZu9BJ0SSOdfrrhedGWEGYL
 
 test:
   adapter: postgresql
   encoding: unicode
-  database: valentine_test
+  database: dfihue9i959bua
   pool: 5
   post: 5432
-  host: localhost
-  username: postgres
-  password: 1988iloveyou
+  host: ec2-54-225-103-132.compute-1.amazonaws.com
+  username: evbouuvyrgnlqj
+  password: 6kSDZu9BJ0SSOdfrrhedGWEGYL
 
