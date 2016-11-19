@@ -65,10 +65,10 @@
 
 			<div class="tab-content">
 			 <div role="tabpanel" class="tab-pane active" id="description">
-			  <p> <%= @item.description %> </p>
+			  <p> <%= markdown @item.description %> </p>
 			 </div>
 			 <div role="tabpanel" class="tab-pane top-10" id="features">
-			  <%= @item.material %>
+			  <%= mark @item.material %>
 			 </div>
 			</div>
 			

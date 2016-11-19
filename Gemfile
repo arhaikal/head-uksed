@@ -17,7 +17,8 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'will_paginate', '~> 3.1'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'rails-i18n', '~> 4.0.0'
-
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+gem 'pygments.rb', '~> 0.6.3'
 
 group :development, :test do
   gem 'byebug'
