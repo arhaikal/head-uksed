@@ -16,7 +16,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t ".lang" %> <span class="caret"></span></a>
                 <ul class="dropdown-menu" id="my-navbar">
 
-                  <li><%= link_to image_tag("http://img.auto24.ee/images/language_flags/language_flag_4.gif")+" Eesti keeles", {locale: "en"}, :class => "#{ 'hidden' if I18n.locale.to_s == 'en' }" %></li>
+                  <li><%= link_to image_tag("http://img.auto24.ee/images/language_flags/language_flag_4.gif")+" ", {locale: "en"}, :class => "#{ 'hidden' if I18n.locale.to_s == 'en' }" %></li>
 
                   <li><%= link_to image_tag("http://img.auto24.ee/images/language_flags/language_flag_5.gif")+" На русском", {locale: "ru"}, :class => "#{ 'hidden' if I18n.locale.to_s == 'ru' }" %></li>
               </ul>

@@ -1,6 +1,7 @@
 
 @import 'pygments';
 
+
 * {
 
   font-family: 'Archivo Narrow', sans-serif;
@@ -115,6 +116,7 @@ ul li a {
 }
 
 
+
 #push {
   height: 70px;
 }
@@ -138,9 +140,80 @@ ul li a {
   margin-bottom: 5px;
 }
 
+
+
+
 .jumborton {
   color: #e8e8e8
 }
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 200px;
+  margin-top: 200px;
+}
+
+.customer-box {
+   margin-left: 100px;
+   margin-right: 100px;
+
+}
+
+@media screen and (max-width: 900px) {
+  .customer-box {
+     margin-left: 20px;
+     margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+     margin: 0 auto;
+     margin-bottom: 20px;
+
+  }
+  .main-container {
+    flex-direction: column;
+
+  }
+}
+
+.div {
+  display: flex;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  border: 2px solid #fec15f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  opacity: 1;
+  i {
+  color: #fec15f;
+  opacity: .7;
+  }
+  p {
+  font-size: 1.3em;
+  }
+  &:hover i {
+  opacity: 2;
+  }
+}
+
+
+
+.counter {
+  font-size: 3.5em;
+}
+
+
 
 .cover {
   margin-top: 0px;
@@ -172,135 +245,7 @@ ul li a {
 }
 
 
-#about {
-  margin: 150px 0px 150px 0px;
-}
 
-#about .icon-container {
-  margin: 0 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-@media screen and (max-width: 920px) {
-  #about .icon-container {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-#about .glyphicon {
-  font-size: 10em;
-  color: #fec15f;
-  text-align: center;
-  opacity: 1;
-  transition-property: opacity;
-  transition-duration: 1s;
-  transition-delay: .2s;
-}
-
-@media screen and (max-width: 1150px) {
-  #about {
-    margin: 0px 0px 100px 0px;
-  }
-}
-
-#about .center {
-  text-align: center;
-}
-
-#about h1 {
-  margin-bottom: 100px;
-  text-decoration: underline;
-}
-
-#about .icon-box {
-  height: 200px;
-  width: 200px;
-  position: relative;
-  float: left;
-  border: solid;
-  border-radius: 50%;
-  border-color: #fec15f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition-property: border-radius;
-  transition-duration: .4s;
-  transition-delay: .3s;
-  transition: transform 1s .3s;
-}
-
-@media screen and (max-width: 1150px) {
-  #about .icon-box {
-    margin: 0 auto;
-    margin-bottom: 50px;
-  }
-}
-
-#about .icon-box .text-box {
-  background-color: #fec15f;
-  opacity: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  transition-property: opacity;
-  transition-delay: 0;
-  transition-duration: .1s;
-}
-
-#about .icon-box .text-box p {
-  font-size: 1.5em;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  padding-top: 10px;
-  text-transform: uppercase;
-}
-
-#about .icon-box:hover {
-  border-radius: 0;
-  transition-property: border-radius;
-  transition-duration: .6s;
-  transition-delay: 0s;
-  transform: scale(1.45);
-  transform-origin: center;
-  transition: transform 2s;
-}
-
-#about .icon-box:hover .glyphicon {
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: .3s;
-  transition-delay: 0s;
-}
-
-#about .icon-box:hover .text-box {
-  opacity: 1;
-  transition-property: opacity;
-  transition-duration: .3s;
-  transition-delay: .3s;
-}
-
-.icon-box:nth-child(1) .glyphicon {
-  padding-left: 8px;
-  padding-bottom: 8px;
-}
-
-.icon-box:nth-child(2) .glyphicon {
-  padding-right: 11px;
-  padding-top: 11px;
-}
-
-.icon-box:nth-child(3) .glyphicon {
-  padding-right: 30px;
-  padding-bottom: 2px;
-}
 
 .gallery .gallery-item {
   height: 350px;
