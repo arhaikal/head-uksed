@@ -183,6 +183,10 @@ ul li a {
 
 .div {
   display: flex;
+  p {
+  font-size: 2.3em;
+  align-self: flex-end;
+  }
 }
 
 .box {
@@ -199,11 +203,10 @@ ul li a {
   color: #fec15f;
   opacity: .7;
   }
-  p {
-  font-size: 1.3em;
-  }
   &:hover i {
   opacity: 2;
+  transform: scale(1.1);
+  transition-duration: .5s;
   }
 }
 
